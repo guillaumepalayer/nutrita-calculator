@@ -1,0 +1,27 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.bg-green-light{
+    background-color: #47e6b1;
+}
+.bg-green{
+    background-color: #22c88a;
+}
+.bg-orange-light{
+    background-color: #ffe1c5;
+}
+.bg-red-light{
+    background-color: #fdc2cc;
+}
+.text-green{
+  color: #22C88A;
+}
+.chart-legend-indicator{
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    margin-right: .375rem;
+    border-radius: 50%;
+}

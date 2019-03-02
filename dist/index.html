@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="assets/libs/highlight.js/styles/vs2015.css">
+    <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Theme CSS -->
+      
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
+
+    <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
+
+    <style>body { display: none; }</style>
+    
+
+    <title>Nutrita Calculator</title>
+  </head>
+  <body>
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <div class="container mt-3">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 col-xl-6">
+            <div class="card mb-7" id="step0">
+              <div class="card-header border-0" style="min-height:48px">
+                <div class="row align-items-center">
+                  <div class="col small text-muted">
+                    <button type="button" class="btn btn-sm btn-link text-muted pl-0">Imperial</button> | <button type="button" class="btn btn-sm btn-link text-green">Metric</button>
+                  </div>
+                  <div class="col-auto small text-muted">
+                    <a class="text-muted" href="#">By<img src="assets/img/logo.png" class="img-fluid d-inline-block ml-2 mr-1 align-middle" width="12px" alt="powered by Nutrita">Nutrita</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-body text-center">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-xl-10">
+
+                    <img src="assets/img/illustrations/happiness.svg" alt="..." class="img-fluid mt-2 mb-4 mx-auto" style="max-width: 192px;">
+                    <h1>Ditch The Carbs Calculator</h1>
+                    <h2 class="text-secondary">
+                      What to eat according to your health goal?
+                    </h2>
+
+                    <p class="text-muted">
+                      Our calculator will help you find the exact amount of carbs, fat, protein, and the equivalent foods you need to reach your health goal through your diet, whether you want to reverse type 2 diabetes, lose, gain, maintain your weight or eat for longevity.
+                    </p>
+
+                    </div>
+                </div>
+              </div>
+              <a href="#step1">
+                <div class="card-footer text-white text-center py-3 bg-green">
+                  Get Started
+                </div>
+              </a>
+            </div>
+            <div class="card mb-7" id="step1">
+              <div class="card-header border-0" style="min-height:48px">
+                <div class="row align-items-center">
+                  <div class="col small text-muted">
+                    <button type="button" class="btn btn-sm btn-link text-muted pl-0">Imperial</button> | <button type="button" class="btn btn-sm btn-link text-green">Metric</button>
+                  </div>
+                  <div class="col-auto small text-muted">
+                    <a class="text-muted" href="#">By<img src="assets/img/logo.png" class="img-fluid d-inline-block ml-2 mr-1 align-middle" width="12px" alt="powered by Nutrita">Nutrita</a>
+                  </div>
+                </div>
+
+              </div>
+              <!-- progress bar buying -->
+              <div class="progress rounded-0" style="height: 4px;">
+                  <div class="progress-bar bg-green rounded-0" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-light border-left border-white" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="selectGoalDiet">Goal</label>
+                    <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="selectGoalDiet">
+                      <option>
+                        Reverse type 2 diabetes
+                      </option>
+                      <option>
+                        Option 2
+                      </option>
+                      <option>
+                        Option 3
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="gender">
+                      <option>
+                        Female
+                      </option>
+                      <option>
+                        Male
+                      </option>
+                      <option>
+                        Other
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="height">Height</label>
+                      <input type="number" class="form-control form-control-lg" id="height" placeholder="0 cm">
+                      <small id="height" class="form-text text-muted pt-2 mb-0">
+                        If you don’t know your exact height, enter your best guess.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="weight">Weight</label>
+                      <input type="number" class="form-control form-control-lg" id="weight" placeholder="0 kg">
+                      <small id="weight" class="form-text text-muted pt-2 mb-0">
+                        If you don’t know your exact weight, enter your best guess.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="targetWeight">Target Weight</label>
+                      <input type="number" class="form-control form-control-lg" id="targetWeight" placeholder="0 kg">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="waist">Waist</label>
+                      <input type="number" class="form-control form-control-lg" id="waist" placeholder="0 cm">
+                      <small id="waist" class="form-text text-muted pt-2 mb-0">
+                        If you don’t know your exact waist, enter your best guess or ignore the step.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="bodyFatPercentage">Body Fat %</label>
+                      <select class="form-control form-control-lg" data-toggle="select" id="bodyFatPercentage">
+                        <option>3 %</option>
+                        <option>4 %</option>
+                        <option>5 %</option>
+                        <option>6 %</option>
+                        <option>7 %</option>
+                        <option>8 %</option>
+                        <option>9 %</option>
+                        <option>x %</option>
+                      </select>
+                      <small id="bodyFatPercentage" class="form-text text-muted pt-2 mb-0">
+                        If you don’t know your body fat %, enter your best guess.
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="activityLevel">Activity Levels</label>
+                    <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="activityLevel">
+                      <option>Walking</option>
+                      <option>Sport 1x / week</option>
+                      <option>Sport 2x / week</option>
+                      <option>Sport 3x / week</option>
+                      <option>Sport 4/5 week</option>
+                      <option>Sport every day</option>
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="allergies">Allergies</label>
+                      <select class="form-control form-control-lg" data-toggle="select" multiple id="allergies">
+                        <option>Nuts</option>
+                        <option>AllergyX</option>
+                        <option>AllergyX</option>
+                        <option>AllergyX</option>
+                        <option>AllergyX</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="dietPreference">Diet Preference</label>
+                      <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="dietPreference">
+                        <option>Low Carbs</option>
+                        <option>Keto</option>
+                        <option>Vegan Keto</option>
+                        <option>Carnivore</option>
+                        <option>Paleo</option>
+                        <option>Mediterranean</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Enter your email address to see your results</label>
+                    <input type="text" class="form-control form-control-lg" id="email" placeholder="Your Email Address">
+                  </div>
+                </form>
+              </div>
+
+              <a href="#step2">
+                <div class="card-footer text-white text-center py-3 bg-green">
+                  See My Results
+                </div>
+              </a>
+            </div>
+            <div class="card mb-7" id="step2">
+              <div class="card-header border-0" style="min-height:48px">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <a href="#step1">
+                      <i class="fe fe-arrow-left text-dark"></i>
+                    </a>
+                  </div>
+                  <div class="col-auto small text-muted">
+                    <a class="text-muted" href="#">By<img src="assets/img/logo.png" class="img-fluid d-inline-block ml-2 mr-1 align-middle" width="12px" alt="powered by Nutrita">Nutrita</a>
+                  </div>
+                </div>
+
+              </div>
+              <!-- progress bar buying -->
+              <div class="progress rounded-0" style="height: 4px;">
+                  <div class="progress-bar bg-green rounded-0" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-green border-left border-white" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="card-body px-0">
+                <div class="row justify-content-center text-center px-4 mb-4">
+                  <div class="col-12 col-xl-10">
+
+                    <img src="assets/img/illustrations/undraw_mail_cg1t.svg" alt="..." class="img-fluid mt-2 mb-4 mx-auto" style="max-width: 64px;">
+                    <h1>Your Results</h1>
+                    <p class="text-secondary">
+                       To reach your health goal through your diet, you need...
+                    </p>
+                  </div>
+                </div>
+                <div class="row no-gutters mb-3 text-left">
+                    <div class="col-4 pl-3">
+                        <div class="media">
+                            <span class="align-self-center mr-1"><i class="chart-legend-indicator bg-green-light"></i></span>
+                            <div class="media-body">
+                                <h5 class="m-0">70 % <span class="small mb-0">Fat</span></h5>
+                                <p class="small text-muted mb-0">00.00 g</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="media">
+                            <span class="align-self-center mr-1"><i class="chart-legend-indicator bg-orange-light"></i></span>
+                            <div class="media-body">
+                                <h5 class="m-0">25 % <span class="small mb-0">Protein</span></h5>
+                                <p class="small text-muted mb-0">00.00 g</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 pr-3">
+                        <div class="media">
+                            <span class="align-self-center mr-1"><i class="chart-legend-indicator bg-red-light"></i></span>
+                            <div class="media-body">
+                                <h5 class="m-0">5 % <span class="small mb-0">Carbs</span></h5>
+                                <p class="small text-muted mb-0">00.00 g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress rounded-0" style="height: 4px">
+                    <div class="progress-bar rounded-0 bg-green-light" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-orange-light" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar rounded-0 bg-red-light" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="table-responsive px-4">
+                  <table class="table mt-2 mb-0">
+                    <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-top-0">
+                          <span class="h6">Metric</span>
+                        </th>
+                        <th class="px-0 bg-transparent border-top-0 text-right">
+                          <span class="h6">Value</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">Avg maintenance cal. estimate / day</td>
+                        <td class="px-0 text-right">2500 kcal</td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 border-top text-secondary">Protein per g/kg/lbm/day</td>
+                        <td class="px-0 text-right border-top">1.5678 g/kg</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
+                        <td class="px-0 text-right border-top py-3">600.00 g cooked salmon</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Or</td>
+                        <td colspan="2" class="px-0 text-right border-top py-3">X eggs</td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 border-top text-secondary">Activity goal</td>
+                        <td class="px-0 text-right border-top">Min. 2x sport sess. / week</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
+                        <td class="px-0 text-right border-top py-3">Crossfit 20 min</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Or</td>
+                        <td colspan="2" class="px-0 text-right border-top py-3">Running 30 min</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Or</td>
+                        <td colspan="2" class="px-0 text-right border-top py-3">Cycling 10 min</td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 border-top text-secondary">Net carbs goal / day</td>
+                        <td class="px-0 text-right border-top">< 20g</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
+                        <td class="px-0 text-right border-top py-3">4 tomatoes</td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td class="pr-0 border-top text-muted py-3">Or</td>
+                        <td colspan="2" class="px-0 text-right border-top py-3">50 g cashew nuts</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a href="#step1">
+                <div class="card-footer text-white text-center py-3 bg-green">
+                  Update My Data
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="assets/libs/list.js/dist/list.min.js"></script>
+    <script src="assets/libs/quill/dist/quill.min.js"></script>
+    <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="assets/libs/chart.js/Chart.extension.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+  </body>
+</html>
