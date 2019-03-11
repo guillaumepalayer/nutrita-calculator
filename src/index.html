@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Nutrita Calculator"
+      "title": "Food calculator"
     })
   </head>
   <body>
@@ -31,13 +31,13 @@
                   <div class="col-12 col-xl-10">
 
                     <img src="assets/img/illustrations/happiness.svg" alt="..." class="img-fluid mt-2 mb-4 mx-auto" style="max-width: 192px;">
-                    <h1>Ditch The Carbs Calculator</h1>
+                    <h1>Food calculator</h1>
                     <h2 class="text-secondary">
-                      What to eat according to your health goal?
+                      The right food for the right goal
                     </h2>
 
                     <p class="text-muted">
-                      Our calculator will help you find the exact amount of carbs, fat, protein, and the equivalent foods you need to reach your health goal through your diet, whether you want to reverse type 2 diabetes, lose, gain, maintain your weight or eat for longevity.
+                      How tall are you? What's your weight? Do you want to lose fat, control your blood sugars, or build some muscle? Nutrita is here to listen and give you some simple advices based on good science. Lets get started.
                     </p>
 
                     </div>
@@ -69,16 +69,16 @@
               <div class="card-body">
                 <form>
                   <div class="form-group">
-                    <label for="selectGoalDiet">Goal</label>
+                    <label for="selectGoalDiet">Select your Goal</label>
                     <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="selectGoalDiet">
                       <option>
-                        Reverse type 2 diabetes
+                        Lose fat
                       </option>
                       <option>
-                        Option 2
+                        Control blood sugars
                       </option>
                       <option>
-                        Option 3
+                        Build muscle
                       </option>
                     </select>
                   </div>
@@ -100,32 +100,49 @@
                     <div class="form-group col-md-4">
                       <label for="height">Height</label>
                       <input type="number" class="form-control form-control-lg" id="height" placeholder="0 cm">
-                      <small id="height" class="form-text text-muted pt-2 mb-0">
-                        If you don’t know your exact height, enter your best guess.
-                      </small>
                     </div>
                     <div class="form-group col-md-4">
                       <label for="weight">Weight</label>
                       <input type="number" class="form-control form-control-lg" id="weight" placeholder="0 kg">
-                      <small id="weight" class="form-text text-muted pt-2 mb-0">
-                        If you don’t know your exact weight, enter your best guess.
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="HbA1c">HbA1c %</label>
+                      <input type="number" class="form-control form-control-lg" id="HbA1c" placeholder="0 %">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="fastingBloodSugar">Fasting blood sugars</label>
+                      <input type="number" class="form-control form-control-lg" id="fastingBloodSugar" placeholder="mmol/L">
+                      <small id="fastingBloodSugar" class="form-text text-muted pt-2 mb-0">
+                        Optional
                       </small>
                     </div>
                     <div class="form-group col-md-4">
-                      <label for="targetWeight">Target Weight</label>
-                      <input type="number" class="form-control form-control-lg" id="targetWeight" placeholder="0 kg">
+                      <label for="triglycerides">Fasting triglycerides</label>
+                      <input type="number" class="form-control form-control-lg" id="triglycerides" placeholder="mmol/L">
+                      <small id="triglycerides" class="form-text text-muted pt-2 mb-0">
+                        Optional
+                      </small>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="fastingInsulin">Fasting insulin</label>
+                      <input type="number" class="form-control form-control-lg" id="fastingInsulin" placeholder="pmol/L">
+                      <small id="fastingInsulin" class="form-text text-muted pt-2 mb-0">
+                        Optional
+                      </small>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="waist">Waist</label>
+                      <label for="waist">Waist circumference</label>
                       <input type="number" class="form-control form-control-lg" id="waist" placeholder="0 cm">
                       <small id="waist" class="form-text text-muted pt-2 mb-0">
-                        If you don’t know your exact waist, enter your best guess or ignore the step.
+                        If you don’t know your exact waist, enter your best guess.
                       </small>
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="bodyFatPercentage">Body Fat %</label>
+                      <label for="bodyFatPercentage">Body fat percentage %</label>
                       <select class="form-control form-control-lg" data-toggle="select" id="bodyFatPercentage">
                         <option>3 %</option>
                         <option>4 %</option>
@@ -137,54 +154,54 @@
                         <option>x %</option>
                       </select>
                       <small id="bodyFatPercentage" class="form-text text-muted pt-2 mb-0">
-                        If you don’t know your body fat %, enter your best guess.
+                        <a href="#" target="_blank">How to measure it?</a>
                       </small>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="activityLevel">Activity Levels</label>
-                    <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="activityLevel">
-                      <option>Walking</option>
-                      <option>Sport 1x / week</option>
-                      <option>Sport 2x / week</option>
-                      <option>Sport 3x / week</option>
-                      <option>Sport 4/5 week</option>
-                      <option>Sport every day</option>
-                    </select>
+
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="allergies">Allergies</label>
-                      <select class="form-control form-control-lg" data-toggle="select" multiple id="allergies">
-                        <option>Nuts</option>
-                        <option>AllergyX</option>
-                        <option>AllergyX</option>
-                        <option>AllergyX</option>
-                        <option>AllergyX</option>
+                      <label for="activityLevel">Activity Levels</label>
+                      <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="activityLevel">
+                        <option>Walking</option>
+                        <option>Sport 1x week</option>
+                        <option>Sport 3x week</option>
+                        <option>Sport 4/5x week</option>
+                        <option>Disable</option>
                       </select>
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="dietPreference">Diet Preference</label>
-                      <select class="form-control form-control-lg" data-toggle="select" data-minimum-results-for-search="-1" id="dietPreference">
-                        <option>Low Carbs</option>
-                        <option>Keto</option>
-                        <option>Vegan Keto</option>
-                        <option>Carnivore</option>
-                        <option>Paleo</option>
-                        <option>Mediterranean</option>
+                      <label for="allergies">Allergies or preferences</label>
+                      <select class="form-control form-control-lg" data-toggle="select" multiple id="allergies">
+                        <option>Lactose</option>
+                        <option>Nuts</option>
+                        <option>Sea food</option>
+                        <option>Soy</option>
+                        <option>Wheat</option>
+                        <option>Corn</option>
+                        <option>Gluten</option>
+                        <option>Fruits</option>
                       </select>
+                      <small id="allergies" class="form-text text-muted pt-2 mb-0">
+                        Optional
+                      </small>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="email">Enter your email address to see your results</label>
                     <input type="text" class="form-control form-control-lg" id="email" placeholder="Your Email Address">
                   </div>
+                  <div class="form-group mb-0">
+                    <small class="text-muted">By clicking this button, you agree to CompanyName's <a href="#">Anti-spam Policy & Terms of Use</a>.</small>
+                  </div>
                 </form>
               </div>
 
               <a href="#step2">
                 <div class="card-footer text-white text-center py-3 bg-green">
-                  See My Results
+                  See Your Targets
                 </div>
               </a>
             </div>
@@ -208,17 +225,17 @@
                   <div class="progress-bar bg-green border-left border-white" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <div class="card-body px-0">
-                <div class="row justify-content-center text-center px-4 mb-4">
+                <div class="row justify-content-center text-center px-4">
                   <div class="col-12 col-xl-10">
 
-                    <img src="assets/img/illustrations/undraw_mail_cg1t.svg" alt="..." class="img-fluid mt-2 mb-4 mx-auto" style="max-width: 64px;">
-                    <h1>Your Results</h1>
+                    <img src="assets/img/illustrations/undraw_personal_data_29co.svg" alt="..." class="img-fluid mt-2 mb-4 mx-auto" style="max-width: 128px;">
+                    <h1>Your targets</h1>
                     <p class="text-secondary">
-                       To reach your health goal through your diet, you need...
+                       Here's what we recommend you try...
                     </p>
                   </div>
                 </div>
-                <div class="row no-gutters mb-3 text-left">
+                <div class="row no-gutters mb-3 text-left d-none">
                     <div class="col-4 pl-3">
                         <div class="media">
                             <span class="align-self-center mr-1"><i class="chart-legend-indicator bg-green-light"></i></span>
@@ -247,14 +264,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="progress rounded-0" style="height: 4px">
+                <div class="progress rounded-0 d-none" style="height: 4px">
                     <div class="progress-bar rounded-0 bg-green-light" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                     <div class="progress-bar bg-orange-light" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     <div class="progress-bar rounded-0 bg-red-light" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="table-responsive px-4">
-                  <table class="table mt-2 mb-0">
-                    <thead>
+                  <table class="table mb-0">
+                    <thead class="d-none">
                       <tr>
                         <th class="px-0 bg-transparent border-top-0">
                           <span class="h6">Metric</span>
@@ -266,48 +283,167 @@
                     </thead>
                     <tbody>
                       <tr class="small">
-                        <td class="px-0 text-secondary">Avg maintenance cal. estimate / day</td>
-                        <td class="px-0 text-right">2,500 kcal</td>
+                        <td class="px-0 border-top text-secondary pt-4">Net carbs target / day</td>
+                        <td class="px-0 text-right align-middle border-top pt-4"><h5 class="pull-net-carbs m-0"></h5></td>
+                      </tr>
+                      <tr class="">
+                        <td colspan="2" class="pt-0 px-0 border-0">
+                          <input type="range" min="1" max="100" value="20" data-rangeslider>
+                        </td>
+                      </tr>
+                      <tr class="h6 font-weight-normal">
+                        <td colspan="2" class="border-0 pt-0 px-0">
+                          <h6 class="text-uppercase text-muted my-2">Equivalent per body weight</h6>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 col-md-10 ml-n2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                      Medium sweet potato
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      1x
+                                  </h6>
+                              </div>
+                          </a>
+                          <div class="text-uppercase text-muted h6 mb-0">OR</div>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 col-md-10 ml-n2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                      Cashew
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      200 g
+                                  </h6>
+                              </div>
+                          </a>
+                          <div class="text-uppercase text-muted h6 mb-0">OR</div>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 col-md-10 ml-n2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                       Medium banana
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      1x
+                                  </h6>
+                              </div>
+                          </a>
+                        </td>
                       </tr>
                       <tr class="small">
-                        <td class="px-0 border-top text-secondary">Protein per g/kg/lbm/day</td>
-                        <td class="px-0 text-right border-top">1.5678 g/kg</td>
+                        <td class="px-0 border-top text-secondary pt-4">Protein target / day</td>
+                        <td class="px-0 text-right align-middle border-top"><h5 class="pull-protein m-0"></h5></td>
+                      </tr>
+                      <tr class="">
+                        <td colspan="2" class="pt-0 px-0 border-0">
+                          <input type="range" min="0" max="4" step="0.1" value="2" data-rangeslider>
+                        </td>
                       </tr>
                       <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
-                        <td class="px-0 text-right border-top py-3">600.00 g cooked salmon</td>
-                      </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Or</td>
-                        <td colspan="2" class="px-0 text-right border-top py-3">X eggs</td>
+                        <td colspan="2" class="border-0 pt-0 px-0">
+                          <h6 class="text-uppercase text-muted my-2">Equivalent per body weight</h6>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 ml--2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                      Salmon fillet
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      250 g
+                                  </h6>
+                              </div>
+                          </a>
+                          <div class="text-uppercase text-muted h6 mb-0">OR</div>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 col-md-10 ml-n2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                      Medium egg
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      6x
+                                  </h6>
+                              </div>
+                          </a>
+                          <div class="text-uppercase text-muted h6 mb-0">OR</div>
+                          <a href="#!" class="row align-items-center">
+                              <div class="col-4 col-md-2 pl-0">
+                                <span class="avatar avatar-lg" >
+                                    <img src="https://nutrita.app/static/media/outline-broken_image-24px.a9ddae8f.svg" alt="..." width="64px" class="avatar-img rounded"/>
+                                </span>
+                              </div>
+                              <div class="col-8 col-md-10 ml-n2">
+                                  <h4 class="card-title mb-1 name text-dark text-truncate">
+                                      Rib-eye
+                                  </h4>
+                                  <h6 class="text-uppercase text-muted my-2">
+                                      250 g
+                                  </h6>
+                              </div>
+                          </a>
+                        </td>
                       </tr>
                       <tr class="small">
-                        <td class="px-0 border-top text-secondary">Activity goal</td>
-                        <td class="px-0 text-right border-top">Min. 2x sport sess. / week</td>
-                      </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
-                        <td class="px-0 text-right border-top py-3">Crossfit 20 min</td>
-                      </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Or</td>
-                        <td colspan="2" class="px-0 text-right border-top py-3">Running 30 min</td>
-                      </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Or</td>
-                        <td colspan="2" class="px-0 text-right border-top py-3">Cycling 10 min</td>
+                        <td class="px-0 border-top text-secondary">Activity target</td>
+                        <td class="px-0 text-right align-middle border-top"><h5 class="m-0">2x week then x2</h5></td>
                       </tr>
                       <tr class="small">
-                        <td class="px-0 border-top text-secondary">Net carbs goal / day</td>
-                        <td class="px-0 text-right border-top">< 20 g</td>
+                        <td class="px-0 text-secondary">Protein</td>
+                        <td class="px-0 text-right align-middle">
+                          <h5 class="m-0">00.00 g</h5>
+                          <p class="small text-muted mb-0">25 %</p>
+                        </td>
                       </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Equivalent of</td>
-                        <td class="px-0 text-right border-top py-3">4 tomatoes</td>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">Carbs</td>
+                        <td class="px-0 text-right align-middle">
+                          <h5 class="m-0">00.00 g</h5>
+                          <p class="small text-muted mb-0">5 %</p>
+                        </td>
                       </tr>
-                      <tr class="h6 font-weight-normal">
-                        <td class="pr-0 border-top text-muted py-3">Or</td>
-                        <td colspan="2" class="px-0 text-right border-top py-3">50 g cashew nuts</td>
+                      <tr class="small">
+                        <td class="px-0 text-muted">Fat</td>
+                        <td class="px-0 text-right text-muted align-middle">
+                          00.00 g
+                          <p class="small text-muted mb-0">70 %</p>
+                        </td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">For a person your size, your may consume about</td>
+                        <td class="px-0 text-right align-middle"><h5 class="m-0">2,500 kcal</h5></td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">First month HbA1c % target</td>
+                        <td class="px-0 text-right align-middle"><h5 class="m-0">> 5.0 - 5.4</h5></td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">First month fasting blood sugars target</td>
+                        <td class="px-0 text-right align-middle"><h5 class="m-0">5 mmol/L drop</h5></td>
+                      </tr>
+                      <tr class="small">
+                        <td class="px-0 text-secondary">etc.</td>
+                        <td class="px-0 text-right align-middle"><h5 class="m-0">...</h5></td>
                       </tr>
                     </tbody>
                   </table>
@@ -328,6 +464,29 @@
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
+    <script>
+    /*! rangeslider.js - v2.1.1 | (c) 2016 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */
+    !function(a){"use strict";"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a(require("jquery")):a(jQuery)}(function(a){"use strict";function b(){var a=document.createElement("input");return a.setAttribute("type","range"),"text"!==a.type}function c(a,b){var c=Array.prototype.slice.call(arguments,2);return setTimeout(function(){return a.apply(null,c)},b)}function d(a,b){return b=b||100,function(){if(!a.debouncing){var c=Array.prototype.slice.apply(arguments);a.lastReturnVal=a.apply(window,c),a.debouncing=!0}return clearTimeout(a.debounceTimeout),a.debounceTimeout=setTimeout(function(){a.debouncing=!1},b),a.lastReturnVal}}function e(a){return a&&(0===a.offsetWidth||0===a.offsetHeight||a.open===!1)}function f(a){for(var b=[],c=a.parentNode;e(c);)b.push(c),c=c.parentNode;return b}function g(a,b){function c(a){"undefined"!=typeof a.open&&(a.open=a.open?!1:!0)}var d=f(a),e=d.length,g=[],h=a[b];if(e){for(var i=0;e>i;i++)g[i]=d[i].style.cssText,d[i].style.setProperty?d[i].style.setProperty("display","block","important"):d[i].style.cssText+=";display: block !important",d[i].style.height="0",d[i].style.overflow="hidden",d[i].style.visibility="hidden",c(d[i]);h=a[b];for(var j=0;e>j;j++)d[j].style.cssText=g[j],c(d[j])}return h}function h(a,b){var c=parseFloat(a);return Number.isNaN(c)?b:c}function i(a){return a.charAt(0).toUpperCase()+a.substr(1)}function j(b,e){if(this.$window=a(window),this.$document=a(document),this.$element=a(b),this.options=a.extend({},n,e),this.polyfill=this.options.polyfill,this.orientation=this.$element[0].getAttribute("data-orientation")||this.options.orientation,this.onInit=this.options.onInit,this.onSlide=this.options.onSlide,this.onSlideEnd=this.options.onSlideEnd,this.DIMENSION=o.orientation[this.orientation].dimension,this.DIRECTION=o.orientation[this.orientation].direction,this.DIRECTION_STYLE=o.orientation[this.orientation].directionStyle,this.COORDINATE=o.orientation[this.orientation].coordinate,this.polyfill&&m)return!1;this.identifier="js-"+k+"-"+l++,this.startEvent=this.options.startEvent.join("."+this.identifier+" ")+"."+this.identifier,this.moveEvent=this.options.moveEvent.join("."+this.identifier+" ")+"."+this.identifier,this.endEvent=this.options.endEvent.join("."+this.identifier+" ")+"."+this.identifier,this.toFixed=(this.step+"").replace(".","").length-1,this.$fill=a('<div class="'+this.options.fillClass+'" />'),this.$handle=a('<div class="'+this.options.handleClass+'" />'),this.$range=a('<div class="'+this.options.rangeClass+" "+this.options[this.orientation+"Class"]+'" id="'+this.identifier+'" />').insertAfter(this.$element).prepend(this.$fill,this.$handle),this.$element.css({position:"absolute",width:"1px",height:"1px",overflow:"hidden",opacity:"0"}),this.handleDown=a.proxy(this.handleDown,this),this.handleMove=a.proxy(this.handleMove,this),this.handleEnd=a.proxy(this.handleEnd,this),this.init();var f=this;this.$window.on("resize."+this.identifier,d(function(){c(function(){f.update(!1,!1)},300)},20)),this.$document.on(this.startEvent,"#"+this.identifier+":not(."+this.options.disabledClass+")",this.handleDown),this.$element.on("change."+this.identifier,function(a,b){if(!b||b.origin!==f.identifier){var c=a.target.value,d=f.getPositionFromValue(c);f.setPosition(d)}})}Number.isNaN=Number.isNaN||function(a){return"number"==typeof a&&a!==a};var k="rangeslider",l=0,m=b(),n={polyfill:!0,orientation:"horizontal",rangeClass:"rangeslider",disabledClass:"rangeslider--disabled",horizontalClass:"rangeslider--horizontal",verticalClass:"rangeslider--vertical",fillClass:"rangeslider__fill",handleClass:"rangeslider__handle",startEvent:["mousedown","touchstart","pointerdown"],moveEvent:["mousemove","touchmove","pointermove"],endEvent:["mouseup","touchend","pointerup"]},o={orientation:{horizontal:{dimension:"width",direction:"left",directionStyle:"left",coordinate:"x"},vertical:{dimension:"height",direction:"top",directionStyle:"bottom",coordinate:"y"}}};return j.prototype.init=function(){this.update(!0,!1),this.onInit&&"function"==typeof this.onInit&&this.onInit()},j.prototype.update=function(a,b){a=a||!1,a&&(this.min=h(this.$element[0].getAttribute("min"),0),this.max=h(this.$element[0].getAttribute("max"),100),this.value=h(this.$element[0].value,Math.round(this.min+(this.max-this.min)/2)),this.step=h(this.$element[0].getAttribute("step"),1)),this.handleDimension=g(this.$handle[0],"offset"+i(this.DIMENSION)),this.rangeDimension=g(this.$range[0],"offset"+i(this.DIMENSION)),this.maxHandlePos=this.rangeDimension-this.handleDimension,this.grabPos=this.handleDimension/2,this.position=this.getPositionFromValue(this.value),this.$element[0].disabled?this.$range.addClass(this.options.disabledClass):this.$range.removeClass(this.options.disabledClass),this.setPosition(this.position,b)},j.prototype.handleDown=function(a){if(this.$document.on(this.moveEvent,this.handleMove),this.$document.on(this.endEvent,this.handleEnd),!((" "+a.target.className+" ").replace(/[\n\t]/g," ").indexOf(this.options.handleClass)>-1)){var b=this.getRelativePosition(a),c=this.$range[0].getBoundingClientRect()[this.DIRECTION],d=this.getPositionFromNode(this.$handle[0])-c,e="vertical"===this.orientation?this.maxHandlePos-(b-this.grabPos):b-this.grabPos;this.setPosition(e),b>=d&&b<d+this.handleDimension&&(this.grabPos=b-d)}},j.prototype.handleMove=function(a){a.preventDefault();var b=this.getRelativePosition(a),c="vertical"===this.orientation?this.maxHandlePos-(b-this.grabPos):b-this.grabPos;this.setPosition(c)},j.prototype.handleEnd=function(a){a.preventDefault(),this.$document.off(this.moveEvent,this.handleMove),this.$document.off(this.endEvent,this.handleEnd),this.$element.trigger("change",{origin:this.identifier}),this.onSlideEnd&&"function"==typeof this.onSlideEnd&&this.onSlideEnd(this.position,this.value)},j.prototype.cap=function(a,b,c){return b>a?b:a>c?c:a},j.prototype.setPosition=function(a,b){var c,d;void 0===b&&(b=!0),c=this.getValueFromPosition(this.cap(a,0,this.maxHandlePos)),d=this.getPositionFromValue(c),this.$fill[0].style[this.DIMENSION]=d+this.grabPos+"px",this.$handle[0].style[this.DIRECTION_STYLE]=d+"px",this.setValue(c),this.position=d,this.value=c,b&&this.onSlide&&"function"==typeof this.onSlide&&this.onSlide(d,c)},j.prototype.getPositionFromNode=function(a){for(var b=0;null!==a;)b+=a.offsetLeft,a=a.offsetParent;return b},j.prototype.getRelativePosition=function(a){var b=i(this.COORDINATE),c=this.$range[0].getBoundingClientRect()[this.DIRECTION],d=0;return"undefined"!=typeof a["page"+b]?d=a["client"+b]:"undefined"!=typeof a.originalEvent["client"+b]?d=a.originalEvent["client"+b]:a.originalEvent.touches&&a.originalEvent.touches[0]&&"undefined"!=typeof a.originalEvent.touches[0]["client"+b]?d=a.originalEvent.touches[0]["client"+b]:a.currentPoint&&"undefined"!=typeof a.currentPoint[this.COORDINATE]&&(d=a.currentPoint[this.COORDINATE]),d-c},j.prototype.getPositionFromValue=function(a){var b,c;return b=(a-this.min)/(this.max-this.min),c=Number.isNaN(b)?0:b*this.maxHandlePos},j.prototype.getValueFromPosition=function(a){var b,c;return b=a/(this.maxHandlePos||1),c=this.step*Math.round(b*(this.max-this.min)/this.step)+this.min,Number(c.toFixed(this.toFixed))},j.prototype.setValue=function(a){(a!==this.value||""===this.$element[0].value)&&this.$element.val(a).trigger("input",{origin:this.identifier})},j.prototype.destroy=function(){this.$document.off("."+this.identifier),this.$window.off("."+this.identifier),this.$element.off("."+this.identifier).removeAttr("style").removeData("plugin_"+k),this.$range&&this.$range.length&&this.$range[0].parentNode.removeChild(this.$range[0])},a.fn[k]=function(b){var c=Array.prototype.slice.call(arguments,1);return this.each(function(){var d=a(this),e=d.data("plugin_"+k);e||d.data("plugin_"+k,e=new j(this,b)),"string"==typeof b&&e[b].apply(e,c)})},"rangeslider.js is available in jQuery context e.g $(selector).rangeslider(options);"});
+    $(function(){
+    	$('input[type="range"]').rangeslider({
+    		polyfill:false,
+    		onInit:function(){
+    			$('.pull-net-carbs').text($('input[type="range"]').val()+'g');
+    			$('.pull-protein').text($('input[type="range"]').val()+'g');
+    		},
+    		onSlide:function(position, value){
+    			//console.log('onSlide');
+    			//console.log('position: ' + position, 'value: ' + value);
+    			$('.pull-net-carbs').text(value+'g');
+    			$('.pull-protein').text(value+'g');
+    		},
+    		onSlideEnd:function(position, value){
+    			//console.log('onSlideEnd');
+    			//console.log('position: ' + position, 'value: ' + value);
+    		}
+    	});
+    });
+    </script>
 
   </body>
 </html>
